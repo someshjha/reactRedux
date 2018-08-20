@@ -10,7 +10,7 @@ class PostsIndex extends Component{
     }
 
     renderPosts(){
-        console.log(this.props);
+        console.log("Render Post", this.props);
         return _.map(this.props.posts, post => {
             console.log('POST', post);
             return (
@@ -22,7 +22,7 @@ class PostsIndex extends Component{
     }
 
     render() {
-        {console.log(this.props)}
+        {console.log("Render", this.props)}
         return(
             
             <div>
