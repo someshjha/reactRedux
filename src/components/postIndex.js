@@ -10,10 +10,11 @@ class PostsIndex extends Component{
     }
 
     renderPosts(){
+        console.log(this.props);
         return _.map(this.props.posts, post => {
-            console.log('POST', post[271830]);
+            console.log('POST', post);
             return (
-              <li className="list-group-item"> 
+              <li className="list-group-item" key={post.id}> 
                 {post.title}
               </li>
             );
@@ -21,7 +22,9 @@ class PostsIndex extends Component{
     }
 
     render() {
+        {console.log(this.props)}
         return(
+            
             <div>
                 <h3>Posts</h3>
                 <ul className = "list-group">
@@ -33,7 +36,8 @@ class PostsIndex extends Component{
 }
 
 function mapStateToProps(state){
-    return {posts: state};
+    console.log("S", state);
+    return {posts: state.props};
 }
 
 
